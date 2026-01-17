@@ -596,8 +596,9 @@ function initMagnetLines() {
     const container = document.getElementById('magnet-lines');
     if (!container) return;
 
-    const rows = 9;
-    const columns = 9;
+    const isMobile = window.innerWidth <= 850;
+    const rows = isMobile ? 3 : 9;
+    const columns = isMobile ? 3 : 9;
     const total = rows * columns;
     const baseAngle = 0;
     const lineColor = "#e85642"; // Matches our primary red
@@ -620,8 +621,10 @@ function initMagnetLines() {
     const items = container.querySelectorAll('span');
 
     const onPointerMove = (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
+        const x = e.clientX || (e.touches && e.touches[0].clientX);
+        const y = e.clientY || (e.touches && e.touches[0].clientY);
+
+        if (!x || !y) return;
 
         items.forEach(item => {
             const rect = item.getBoundingClientRect();
@@ -638,6 +641,8 @@ function initMagnetLines() {
     };
 
     window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('touchmove', onPointerMove, { passive: true });
+    window.addEventListener('touchstart', onPointerMove, { passive: true });
 
     // Initial orientation
     if (items.length) {
