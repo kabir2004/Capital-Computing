@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Computing | Elite Team of Software Engineers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="header-left-tab">
+            <div class="header-brand">
+                <div class="logo-text">CPTL CMPTNG</div>
+                <div class="logo-sub">DEVELOPMENT<br>LABS</div>
+            </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-center-info">
+            AN ELITE TEAM OF<br>SOFTWARE ENGINEERS
+        </div>
+        <div class="header-right">
+            <a href="#" class="btn-talk">LET'S TALK →</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="section hero" id="hero">
+            <div class="hero-info-row">
+                <div class="info-col">CPTL CMPTNG</div>
+                <div class="info-col">TOR (CAN)</div>
+                <div class="info-col">/0026</div>
+                <div class="info-col">ENGINEERING_</div>
+            </div>
+
+            <div class="hero-stripes">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="hero-footer">
+                <h1 class="hero-title">CAPITAL<br>COMPUTING</h1>
+                <div class="hero-explore">
+                    <span>/</span>
+                    <div class="explore-btn">EXPLORE <span>↓</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section class="section section-dark who-we-are" id="who-we-are">
+            <div class="section-label">WHO WE ARE /</div>
+            <div class="who-we-are-inner">
+                <div class="who-text-side">
+                    <div class="huge-text">
+                        A North American team of specialists with profound technical expertise.
+                    </div>
+                    <a href="#" class="btn-contact">CONTACT US →</a>
+                </div>
+                <div class="who-visual-side">
+                    <div id="magnet-lines" class="magnetLines-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services" id="services">
+            <div class="services-header">
+                <div class="section-label">SERVICES</div>
+                <h2 class="section-title">Tech stacks for a<br>rapidly evolving world:</h2>
+                <div class="service-count">/005</div>
+            </div>
+
+            <div class="services-list">
+                <div class="service-item" id="s001">
+                    <div class="item-meta">S/001</div>
+                    <div class="item-content">
+                        <h3>Advisory</h3>
+                        <p>Gain strategic insights from our fractional CTOs, benefit from comprehensive technical
+                            reviews, and achieve accelerated development with expert backend, frontend, and DevOps
+                            solutions.</p>
+                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                    </div>
+                    <div class="item-visual">
+                        <div class="service-graphic">
+                            <svg viewBox="0 0 100 100" class="service-svg">
+                                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="0.8" fill="none"
+                                    opacity="0.1" />
+                                <path d="M50 10 L50 90 M10 50 L90 50" stroke="black" stroke-width="0.5" opacity="0.2" />
+                                <path d="M50 20 L80 50 L50 80 L20 50 Z" stroke="black" stroke-width="1.2" fill="none" />
+                                <circle cx="50" cy="50" r="2" fill="black" />
+                                <path d="M35 35 L65 65 M65 35 L35 65" stroke="black" stroke-width="0.5" opacity="0.3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" id="s002">
+                    <div class="item-meta">S/002</div>
+                    <div class="item-content">
+                        <h3>Blockchain</h3>
+                        <p>Delivering secure immutable data, smart contract development, tokenomics, and zero-knowledge
+                            proof technologies to optimize security, transparency, and financial operations.</p>
+                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                    </div>
+                    <div class="item-visual">
+                        <div class="service-graphic">
+                            <svg viewBox="0 0 100 100" class="service-svg">
+                                <path d="M50 10 L85 30 L85 70 L50 90 L15 70 L15 30 Z" stroke="black" stroke-width="1.2"
+                                    fill="none" />
+                                <path d="M50 10 V90 M85 30 L15 70 M85 70 L15 30" stroke="black" stroke-width="0.6"
+                                    opacity="0.2" />
+                                <circle cx="50" cy="10" r="2.5" fill="black" />
+                                <circle cx="85" cy="30" r="2.5" fill="black" />
+                                <circle cx="85" cy="70" r="2.5" fill="black" />
+                                <circle cx="50" cy="90" r="2.5" fill="black" />
+                                <circle cx="15" cy="70" r="2.5" fill="black" />
+                                <circle cx="15" cy="30" r="2.5" fill="black" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" id="s003">
+                    <div class="item-meta">S/003</div>
+                    <div class="item-content">
+                        <h3>Product Development</h3>
+                        <p>Bring market-ready products to life with our product development services. Prototypes & MVPs,
+                            SaaS, web, and mobile applications, managed services from planning and design to coding,
+                            testing, and ongoing maintenance.</p>
+                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                    </div>
+                    <div class="item-visual">
+                        <div class="service-graphic">
+                            <svg viewBox="0 0 100 100" class="service-svg">
+                                <rect x="30" y="30" width="40" height="40" stroke="black" stroke-width="1.2"
+                                    fill="none" />
+                                <path d="M10 10 L30 30 M90 10 L70 30 M10 90 L30 70 M90 90 L70 70" stroke="black"
+                                    stroke-width="0.8" opacity="0.4" />
+                                <circle cx="10" cy="10" r="1.5" fill="black" />
+                                <circle cx="90" cy="10" r="1.5" fill="black" />
+                                <circle cx="10" cy="90" r="1.5" fill="black" />
+                                <circle cx="90" cy="90" r="1.5" fill="black" />
+                                <rect x="40" y="40" width="20" height="20" stroke="black" stroke-width="0.6"
+                                    opacity="0.3" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" id="s004">
+                    <div class="item-meta">S/004</div>
+                    <div class="item-content">
+                        <h3>Enterprise Software</h3>
+                        <p>Scale effectively with our enterprise software solutions: streamline operations with
+                            customized platforms, enhance productivity through advanced integrations, and secure your
+                            infrastructure.</p>
+                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                    </div>
+                    <div class="item-visual">
+                        <div class="service-graphic">
+                            <svg viewBox="0 0 100 100" class="service-svg">
+                                <rect x="15" y="15" width="70" height="70" stroke="black" stroke-width="0.6"
+                                    opacity="0.1" fill="none" />
+                                <path d="M30 15 V85 M50 15 V85 M70 15 V85 M15 30 H85 M15 50 H85 M15 70 H85"
+                                    stroke="black" stroke-width="0.4" opacity="0.2" />
+                                <rect x="30" y="30" width="40" height="40" stroke="black" stroke-width="1.5"
+                                    fill="none" />
+                                <path d="M50 30 V70 M30 50 H70" stroke="black" stroke-width="0.8" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" id="s005">
+                    <div class="item-meta">S/005</div>
+                    <div class="item-content">
+                        <h3>Artificial Intelligence (AI)</h3>
+                        <p>Enhance operations with AI, from strategy to development, LLM integration, automated decision
+                            systems, and OCR technology, tailored to optimize performance.</p>
+                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                    </div>
+                    <div class="item-visual">
+                        <div class="service-graphic">
+                            <svg viewBox="0 0 100 100" class="service-svg">
+                                <circle cx="50" cy="50" r="30" stroke="black" stroke-width="1.2" fill="none" />
+                                <circle cx="50" cy="50" r="10" stroke="black" stroke-width="0.8" fill="none" />
+                                <path d="M50 20 L50 35 M50 65 L50 80 M20 50 L35 50 M65 50 L80 50" stroke="black"
+                                    stroke-width="1.2" />
+                                <path d="M50 20 A30 30 0 0 1 80 50" stroke="black" stroke-width="0.5" opacity="0.3"
+                                    fill="none" />
+                                <circle cx="50" cy="50" r="2" fill="black" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section (Drag Slider) -->
+        <section class="section clients" id="clients">
+            <div class="clients-header">
+                <div class="header-pre">/</div>
+                <div class="section-label">OUR CLIENTS</div>
+                <h2 class="section-title">We engage with:</h2>
+                <div class="header-meta">
+                    <span class="meta-num">/008</span>
+                    <a href="#" class="view-all">VIEW ALL →</a>
+                </div>
+            </div>
+
+            <div class="client-slider-wrapper">
+                <div class="client-slider">
+                    <div class="client-card" data-index="0">
+                        <div class="card-meta">I/001</div>
+                        <div class="card-main">
+                            <div class="card-left">
+                                <div class="client-img-fallback" style="background: #0055ff; color: #fff;">STARTUPS
+                                </div>
+                            </div>
+                            <div class="card-right">
+                                <div class="card-desc">
+                                    <p>Empowering startups with agile development and cost-effective solutions, we excel
+                                        in product thinking, rapid prototyping, MVP development, and comprehensive
+                                        mobile and SaaS solutions.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn-card">BUILD WITH US →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card" data-index="1">
+                        <div class="card-meta">I/002</div>
+                        <div class="card-main">
+                            <div class="card-left">
+                                <div class="client-img-fallback" style="background: #222;">ENTERPRISE</div>
+                            </div>
+                            <div class="card-right">
+                                <div class="card-desc">
+                                    <p>Helping established organizations modernize their legacy systems, implement
+                                        scalable cloud architectures, and harness data through advanced analytics and
+                                        AI-driven automation.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn-card">SCALE WITH US →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card" data-index="2">
+                        <div class="card-meta">I/003</div>
+                        <div class="card-main">
+                            <div class="card-left">
+                                <div class="client-img-fallback" style="background: #e85642;">WEB3</div>
+                            </div>
+                            <div class="card-right">
+                                <div class="card-desc">
+                                    <p>Building the future of the decentralized web with robust smart contracts, secure
+                                        DeFi protocols, and immersive NFT ecosystems that prioritize user sovereignty
+                                        and transparency.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn-card">LAUNCH WITH US →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+        </section>
+
+        <!-- Expertise / Tabs Section -->
+        <section class="section tabs-section" id="expertise-tabs">
+            <div class="tabs-nav">
+                <button class="tab-trigger active" onclick="switchTab(0)">EXPERTISE</button>
+                <button class="tab-trigger" onclick="switchTab(1)">VALUES</button>
+                <button class="tab-trigger" onclick="switchTab(2)">METHODOLOGY</button>
+            </div>
+
+            <div class="tabs-content">
+                <!-- Tab 1: Expertise -->
+                <div class="tab-panel active" id="tab-expertise">
+                    <div class="panel-header">
+                        <span class="panel-pre">/</span>
+                        <h2 class="panel-title">Expertise</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-side-num">1</div>
+                        <div class="panel-rows">
+                            <div class="panel-row">
+                                <span class="row-num">01</span>
+                                <span class="row-label">EDGETECH</span>
+                                <p class="row-desc">The latest in technology trends, from blockchain to artificial
+                                    intelligence.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">02</span>
+                                <span class="row-label">IN-HOUSE</span>
+                                <p class="row-desc">Professional local talent in your timezone, no outsourcing involved.
+                                    Direct communication and collaboration.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">03</span>
+                                <span class="row-label">EXPERIENCED</span>
+                                <p class="row-desc">Hackers to straight-A students, over 90% of our developers are
+                                    senior engineers with various areas of expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Values -->
+                <div class="tab-panel" id="tab-values">
+                    <div class="panel-header">
+                        <span class="panel-pre">/</span>
+                        <h2 class="panel-title">Values</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-side-num">2</div>
+                        <div class="panel-rows">
+                            <div class="panel-row">
+                                <span class="row-num">01</span>
+                                <span class="row-label">FLEXIBILITY</span>
+                                <p class="row-desc">We adapt swiftly to the evolving needs of our clients and markets,
+                                    ensuring tailored solutions.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">02</span>
+                                <span class="row-label">PERFORMANCE</span>
+                                <p class="row-desc">Driven by excellence, we consistently deliver top-tier results,
+                                    setting industry standards for quality and efficiency.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">03</span>
+                                <span class="row-label">INNOVATION</span>
+                                <p class="row-desc">Our commitment to innovation keeps us at the forefront of
+                                    technology, empowering us to solve complex challenges creatively.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Methodology -->
+                <div class="tab-panel" id="tab-methodology">
+                    <div class="panel-header">
+                        <span class="panel-pre">/</span>
+                        <h2 class="panel-title">Methodology</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-side-num">3</div>
+                        <div class="panel-rows">
+                            <div class="panel-row">
+                                <span class="row-num">01</span>
+                                <span class="row-label">PRODUCT THINKING</span>
+                                <p class="row-desc">Product-centric mindset, focusing on delivering functional,
+                                    user-oriented solutions that drive value.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">02</span>
+                                <span class="row-label">COLLABORATIVE</span>
+                                <p class="row-desc">Working closely with your team to ensure their vision and objectives
+                                    are fully realized in every project.</p>
+                            </div>
+                            <div class="panel-row">
+                                <span class="row-num">03</span>
+                                <span class="row-label">SCALABLE</span>
+                                <p class="row-desc">Designed to scale seamlessly with your business needs, ensuring
+                                    robust solutions that accommodate growth and change.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="section testimonial">
+            <div class="testimonial-container">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide active">
+                        <div class="huge-quote">
+                            "Capital Computing didn't just write code; they engineered a data pipeline that reduced our
+                            processing latency by 70%. Their architectural foresight in handling high-throughput data
+                            was exceptional."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Dr. Sarah Jenkins</span>
+                            <span class="author-company">Aegis BioSystems</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "In the world of high-frequency trading, precision is everything. Their team implemented a
+                            robust, low-latency framework that has become the backbone of our algorithmic operations."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Robert H. Vance</span>
+                            <span class="author-company">Quant Edge Capital</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "Scaling our telemetry platform required a level of distributed systems expertise that is
+                            rare in the market. They stepped in and solved our bottleneck issues within weeks."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Jonathan Vane</span>
+                            <span class="author-company">Orbital Dynamics</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "The security audit and subsequent hardening of our core infrastructure by the Capital team
+                            was surgical. They mitigated vulnerabilities we hadn't even considered in our original
+                            roadmap."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Elena Kostkova</span>
+                            <span class="author-company">Vanguard Cyber-Systems</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "Implementing a cross-chain liquidity protocol required a deep understanding of cryptography
+                            and consensus. They delivered a solution that is both gas-efficient and robust."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Arjun Naidu</span>
+                            <span class="author-company">Flux Protocol Labs</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "Our migration to a multi-cloud environment was stalling until we brought them on. They
+                            automated our entire CI/CD pipeline and reduced our deployment cycles by 90%."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sophie Dubois</span>
+                            <span class="author-company">Lumina Cloud Solutions</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="huge-quote">
+                            "Bridging the gap between our specialized hardware and a consumer-facing app was a major
+                            hurdle. Their full-stack approach ensured a seamless, low-latency user experience."
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Thomas Wright</span>
+                            <span class="author-company">Aura Wearables</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="nav-btn prev">←</button>
+                    <button class="nav-btn next">→</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <!-- Empty Column 1 (Maintain Gap) -->
+                <div class="footer-col"></div>
+
+                <!-- Projects (Kept in original central spot) -->
+                <div class="footer-col">
+                    <div class="projects-talk">
+                        <ul class="footer-list bold-links">
+                            <li>PROJECTS</li>
+                            <li>BLOG ↗</li>
+                            <li>ARTICLES ↗</li>
+                            <li>COINKIT ↗</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Services (Pushed to the right of Projects) -->
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul class="footer-list">
+                        <li>Advisory</li>
+                        <li>Blockchain</li>
+                        <li>Product Development</li>
+                        <li>Enterprise Software</li>
+                        <li>Artificial Intelligence (AI)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-mid">
+                <div class="footer-col social-col">
+                    <h4>SOCIAL MEDIA</h4>
+                    <ul class="footer-list">
+                        <li>LinkedIn ↗</li>
+                        <li>Facebook ↗</li>
+                        <li>Twitter ↗</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-grid">
+                <div class="footer-bottom-col">
+                    <h4>OFFICE</h4>
+                    <div class="office-logos">
+                        <!-- Placeholders for logos -->
+                        <div class="logo-placeholder">PARTNER</div>
+                        <div class="logo-placeholder">TECH</div>
+                    </div>
+                    <div class="footer-copyright-row">
+                        <span>© 2026 CPTL CMPTNG</span>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-col">
+                    <h4>CANADA</h4>
+                    <div class="footer-address">
+                        <p>460 Saint-Catherine W.</p>
+                        <p>Suite 305</p>
+                        <p>Montreal, Quebec</p>
+                        <p>H3B 1A6</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#">PRIVACY POLICY</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-col">
+                    <h4>UNITED STATES</h4>
+                    <div class="footer-contact-info">
+                        <p>Contact us</p>
+                        <p>(514) 874-3224</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <span>DESIGNED BY CPTL®</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="header-logo">
+                    <div class="logo-text">CPTL CMPTNG</div>
+                    <div class="logo-sub">DEVELOPMENT<br>LABS</div>
+                </div>
+                <div class="close-menu">✕</div>
+            </div>
+
+            <nav class="menu-nav">
+                <div class="nav-item">
+                    <span class="nav-num">01</span>
+                    <a href="#">Services</a>
+                    <span class="nav-plus">+</span>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-num">02</span>
+                    <a href="#">Projects</a>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-num">03</span>
+                    <a href="#">Expertise</a>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-num">04</span>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+
+            <div class="menu-footer">
+                <div class="footer-contact">
+                    <span>CONTACT US</span>
+                </div>
+                <div class="footer-cta-box">
+                    <div class="cta-text">
+                        <h3>LET'S TALK</h3>
+                        <p>/ F034671</p>
+                    </div>
+                    <div class="cta-arrow">→</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
