@@ -1299,225 +1299,205 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    /* Increased breathing room */
     .section {
-        padding: 80px 20px;
+        padding: 120px 24px;
     }
 
-    /* Global fit fix */
-    body,
-    html {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
-
-    /* Header & Hero */
+    /* Header optimization for more space */
     #main-header {
-        height: auto;
-        padding: 15px 20px;
+        padding: 20px 24px;
     }
 
     .header-left-tab {
-        padding: 15px 20px;
-        gap: 20px;
-        width: auto;
-        max-width: calc(100% - 60px);
+        padding: 20px 24px;
     }
 
-    .header-brand {
-        padding-right: 20px;
-        gap: 15px;
-    }
-
-    .logo-text {
-        font-size: 0.9rem;
-    }
-
+    /* Hero - More expansive feel */
     .hero {
-        padding: 120px 20px 60px;
-        min-height: auto;
+        padding: 180px 24px 120px;
     }
 
     .hero-title {
-        font-size: 10vw;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        word-break: break-word;
+        font-size: 3.5rem;
+        line-height: 1.05;
+        letter-spacing: -2px;
     }
 
     .hero-meta {
-        margin-top: 40px;
-        gap: 20px;
+        margin-top: 60px;
+        gap: 35px;
     }
 
-    /* Who We Are */
+    .meta-item .label {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    /* Who We Are - Relaxed padding */
     .who-we-are-inner {
-        gap: 40px;
-        padding: 0;
+        gap: 80px;
     }
 
     .huge-text {
-        font-size: 8vw;
-        line-height: 1.2;
-        word-break: break-word;
+        font-size: 2.8rem;
+        line-height: 1.15;
+        letter-spacing: -1px;
     }
 
     .magnetLines-container {
-        width: 300px;
-        height: 300px;
+        width: 85vmin;
+        height: 85vmin;
+        max-width: 350px;
+        max-height: 350px;
     }
 
-    /* Services Stacking */
+    /* Services Stacking - Larger comfortable items */
     .service-item {
-        padding: 30px 20px;
-        min-height: 320px;
+        padding: 60px 24px;
+        min-height: 420px;
     }
 
     .service-item h3 {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
     }
 
-    .service-item:nth-child(n) {
-        top: 60px;
+    .service-item p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
     }
 
-    /* Reset all to a safe top */
+    /* Better tab visibility in stack */
+    .service-item:nth-child(1) {
+        top: 80px;
+    }
+
     .service-item:nth-child(2) {
-        top: 110px;
+        top: 150px;
     }
 
     .service-item:nth-child(3) {
-        top: 160px;
+        top: 220px;
     }
 
     .service-item:nth-child(4) {
-        top: 210px;
+        top: 290px;
     }
 
     .service-item:nth-child(5) {
-        top: 210px;
+        top: 290px;
     }
 
     .item-visual {
-        bottom: 20px;
-        right: 20px;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .service-graphic {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
 
-    /* Expertise Tabs */
+    /* Expertise Tabs - Spaced properly */
     .tabs-content {
-        padding: 30px 20px;
-        border: none;
+        padding: 60px 24px;
+        border: 1px solid #222;
     }
 
     .tab-triggers {
-        gap: 10px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        justify-content: flex-start;
-    }
-
-    .tab-trigger {
-        flex-shrink: 0;
-        padding: 10px 15px;
+        gap: 15px;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #222;
     }
 
     .panel-header {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
 
     .panel-title {
-        font-size: 10vw;
+        font-size: 3.5rem;
     }
 
     .panel-row {
-        padding: 20px 0;
-        border-top-style: solid;
-        border-top-width: 1px;
-        border-top-color: #333;
+        padding: 40px 0;
+    }
+
+    .row-label {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
     }
 
     .row-desc {
-        font-size: 0.9rem;
-        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ccc;
     }
 
-    /* Testimonial */
+    /* Testimonial - Cinematic Air */
     .testimonial {
-        padding: 80px 20px;
+        padding: 140px 24px;
     }
 
     .huge-quote {
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 1.4;
-        word-wrap: break-word;
     }
 
     .testimonial-container {
-        padding: 0 40px;
-        width: 100%;
+        padding: 0 20px;
+    }
+
+    .testimonial-author {
+        margin-top: 50px;
     }
 
     .nav-btn {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
+        position: static;
+        transform: none;
+        margin: 0;
     }
 
-    .nav-btn.prev {
-        left: 0;
+    .testimonial-nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 60px;
     }
 
-    .nav-btn.next {
-        right: 0;
-    }
-
-    /* Footer */
+    /* Footer - Organized Breathing */
     #main-footer {
-        padding: 60px 20px 40px;
+        padding: 100px 24px 60px;
     }
 
     .footer-top {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .footer-col {
-        width: 100%;
-    }
-
-    .footer-bottom-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
+        gap: 80px;
     }
 }
 
 @media (max-width: 480px) {
-    .huge-text {
-        font-size: 2.2rem;
+    .hero-title {
+        font-size: 2.8rem;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .huge-text {
+        font-size: 2.4rem;
     }
 
     .panel-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .section {
-        padding: 60px 20px;
-    }
-
-    .nav-btn {
-        width: 35px;
-        height: 35px;
-    }
-
-    .testimonial-container {
-        padding: 0 30px;
+        padding: 100px 20px;
     }
 }
