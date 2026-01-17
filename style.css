@@ -363,7 +363,7 @@ body {
     transition: background 0.4s ease;
 }
 
-/* Staggered offsets for the first 4 titles */
+/* Staggered offsets for the 4 titles */
 .service-item:nth-child(1) {
     top: 140px;
 }
@@ -376,13 +376,9 @@ body {
     top: 340px;
 }
 
-.service-item:nth-child(4) {
-    top: 440px;
-}
-
 /* AI tile docks directly under Enterprise (same top) */
-.service-item:nth-child(5) {
-    top: 440px;
+.service-item:nth-child(4) {
+    top: 340px;
 }
 
 .service-item:hover {
