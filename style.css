@@ -1625,15 +1625,18 @@ footer {
     }
 
     .huge-quote {
-        font-size: 1.4rem !important;
-        /* Further scale down to fit better */
-        line-height: 1.4 !important;
-        font-weight: 300 !important;
-        letter-spacing: -0.01em !important;
+        font-size: 1.1rem !important;
+        /* Scaled down for readability on all phones */
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+        letter-spacing: 0 !important;
+        margin-bottom: 20px !important;
     }
 
     .testimonial-slides {
-        min-height: 380px !important;
+        min-height: 300px !important;
+        /* Smaller footprint */
+        height: auto !important;
     }
 
     .testimonial-nav {
