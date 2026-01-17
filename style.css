@@ -1300,160 +1300,197 @@ footer {
 
 @media (max-width: 768px) {
     .section {
-        padding: 80px 20px;
+        padding: 100px 24px;
     }
 
-    /* Header */
+    /* Header & Hero */
     .header-center-info {
         display: none;
     }
 
-    .header-left-tab {
-        padding: 0 15px;
-    }
-
-    /* Hero */
     .hero {
-        padding: 120px 20px;
+        padding: 160px 24px 100px;
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
+        line-height: 1;
     }
 
     .hero-meta {
         flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
+        gap: 30px;
     }
 
-    /* Who We Are */
+    /* Who We Are - Preserving Design Symmetry */
     .who-we-are-inner {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding-left: 0;
-        gap: 40px;
+        gap: 60px;
     }
 
     .huge-text {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
+        line-height: 1.1;
     }
 
     .magnetLines-container {
-        width: 80vmin;
-        height: 80vmin;
+        width: 70vmin;
+        height: 70vmin;
+        margin: 0 auto;
     }
 
-    /* Services Stacking */
+    /* Services - Surgical Stacking */
     .service-item {
-        flex-direction: column;
-        padding: 40px 20px;
-        min-height: auto;
+        padding: 40px 24px;
+        min-height: 380px;
+        display: block;
+        /* Stack content internally */
     }
 
     .service-item h3 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-top: 15px;
     }
 
+    .service-item p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    /* Organized Mobile Stacking Offsets */
     .service-item:nth-child(1) {
-        top: 80px;
+        top: 70px;
     }
 
     .service-item:nth-child(2) {
-        top: 140px;
+        top: 120px;
     }
 
     .service-item:nth-child(3) {
-        top: 200px;
+        top: 170px;
     }
 
     .service-item:nth-child(4) {
-        top: 260px;
+        top: 220px;
     }
 
     .service-item:nth-child(5) {
-        top: 260px;
+        top: 220px;
     }
 
     .item-visual {
-        position: relative;
-        margin-top: 30px;
+        position: absolute;
+        bottom: 40px;
+        right: 24px;
     }
 
     .service-graphic {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
 
-    /* Expertise Tabs */
+    /* Expertise Tabs - Keeping the Signature Elements */
+    .tabs-content {
+        padding: 40px 24px;
+    }
+
     .panel-header {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .panel-pre {
+        font-size: 1.2rem;
     }
 
     .panel-title {
-        font-size: 3rem;
+        font-size: 3.8rem;
     }
 
     .panel-body {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     .panel-side-num {
-        display: none;
+        display: block;
+        font-size: 6rem;
+        position: absolute;
+        top: -20px;
+        right: 0;
+        opacity: 0.1;
     }
 
     .panel-row {
-        grid-template-columns: 30px 1fr;
-        gap: 15px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 30px 0;
+    }
+
+    .row-num {
+        display: block;
+        font-size: 0.7rem;
+        color: var(--primary-red);
+        margin-bottom: 5px;
     }
 
     .row-label {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         margin-bottom: 5px;
-        grid-column: 2;
     }
 
     .row-desc {
-        grid-column: 2;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.8;
     }
 
-    /* Testimonial */
+    /* Testimonial - High Contrast Center */
     .testimonial {
-        padding: 80px 20px;
+        padding: 120px 24px;
     }
 
     .huge-quote {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         line-height: 1.3;
     }
 
     .testimonial-container {
-        padding: 0 60px;
+        padding: 0 40px;
     }
 
     .nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 0.8rem;
+        width: 45px;
+        height: 45px;
     }
 
-    /* Footer */
+    .nav-btn.prev {
+        left: -10px;
+    }
+
+    .nav-btn.next {
+        right: -10px;
+    }
+
+    /* Footer - Compact Architecture */
     #main-footer {
-        padding: 60px 20px 40px;
+        padding: 80px 24px 40px;
     }
 
     .footer-top {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 60px;
     }
 
     .footer-col:first-child {
         display: none;
     }
 
+    /* Keeps the empty-gap logic but simpler for mobile */
     .footer-bottom-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
     }
 }
