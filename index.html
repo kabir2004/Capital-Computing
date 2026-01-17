@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
+    <div id="page-loader"></div>
     <header id="main-header">
         <div class="header-left-tab">
-            <div class="header-brand">
+            <a href="index.html" class="header-brand">
                 <div class="logo-text">CPTL CMPTNG</div>
                 <div class="logo-sub">DEVELOPMENT<br>LABS</div>
-            </div>
+            </a>
             <div class="burger-menu">
                 <span></span>
                 <span></span>
@@ -90,7 +93,7 @@
                         <p>Gain strategic insights from our fractional CTOs, benefit from comprehensive technical
                             reviews, and achieve accelerated development with expert backend, frontend, and DevOps
                             solutions.</p>
-                        <a href="#" class="btn-service">SEE OUR SERVICES →</a>
+                        <a href="advisory.html" class="btn-service">SEE OUR SERVICES →</a>
                     </div>
                     <div class="item-visual">
                         <div class="service-graphic">
@@ -495,11 +498,9 @@
 
             <div class="footer-bottom-grid">
                 <div class="footer-bottom-col">
-                    <h4>OFFICE</h4>
-                    <div class="office-logos">
-                        <!-- Placeholders for logos -->
-                        <div class="logo-placeholder">PARTNER</div>
-                        <div class="logo-placeholder">TECH</div>
+                    <div class="footer-slogan">
+                        <span class="slogan-pre">/</span>
+                        <h4 class="slogan-text">PEOPLE ARE OUR CAPITAL</h4>
                     </div>
                     <div class="footer-copyright-row">
                         <span>© 2026 CPTL CMPTNG</span>
@@ -544,10 +545,30 @@
             </div>
 
             <nav class="menu-nav">
-                <div class="nav-item">
-                    <span class="nav-num">01</span>
-                    <a href="#">Services</a>
-                    <span class="nav-plus">+</span>
+                <div class="nav-group">
+                    <div class="nav-item has-dropdown">
+                        <span class="nav-num">01</span>
+                        <a href="#">Services</a>
+                        <span class="nav-plus">+</span>
+                    </div>
+                    <div class="nav-dropdown">
+                        <div class="dropdown-tile" onclick="window.location.href='advisory.html'">
+                            <span class="nav-num sub-num">S01</span>
+                            <a href="advisory.html" class="dropdown-item">Advisory</a>
+                        </div>
+                        <div class="dropdown-tile">
+                            <span class="nav-num sub-num">S02</span>
+                            <a href="#" class="dropdown-item">Product Development</a>
+                        </div>
+                        <div class="dropdown-tile">
+                            <span class="nav-num sub-num">S03</span>
+                            <a href="#" class="dropdown-item">Enterprise Software</a>
+                        </div>
+                        <div class="dropdown-tile">
+                            <span class="nav-num sub-num">S04</span>
+                            <a href="#" class="dropdown-item">Artificial Intelligence (AI)</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-item">
                     <span class="nav-num">02</span>

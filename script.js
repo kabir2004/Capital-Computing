@@ -12,7 +12,49 @@ document.addEventListener('DOMContentLoaded', () => {
     initRowScramble();
     initMagnetLines();
     initTestimonialSlider();
+    initPageTransitions();
+    initExpertiseScramble();
+    initAdvisoryCardScramble();
 });
+
+function initPageTransitions() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        gsap.to(loader, {
+            height: 0,
+            duration: 1.2,
+            ease: "power4.inOut"
+        });
+    }
+
+    // Handle internal links for smooth transition
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href !== '#' && !href.startsWith('http') && !href.startsWith('mailto')) {
+                e.preventDefault();
+                const tl = gsap.timeline();
+
+                // Add overlay if it doesn't exist
+                let overlay = document.querySelector('.transition-overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.className = 'transition-overlay';
+                    document.body.appendChild(overlay);
+                }
+
+                tl.to(overlay, {
+                    height: '100%',
+                    duration: 0.8,
+                    ease: "power4.inOut",
+                    onComplete: () => {
+                        window.location.href = href;
+                    }
+                });
+            }
+        });
+    });
+}
 
 function textScramble(el, text, speed = 2) {
     if (el._scrambling) return;
@@ -53,16 +95,14 @@ function textScramble(el, text, speed = 2) {
 function initRowScramble() {
     const rows = document.querySelectorAll('.panel-row');
     rows.forEach(row => {
-        const label = row.querySelector('.row-label');
         const num = row.querySelector('.row-num');
 
-        if (label) label.dataset.value = label.innerText;
-        if (num) num.dataset.value = num.innerText;
-
-        row.addEventListener('mouseenter', () => {
-            if (label) textScramble(label, label.dataset.value);
-            if (num) textScramble(num, num.dataset.value);
-        });
+        if (num) {
+            num.dataset.value = num.innerText;
+            row.addEventListener('mouseenter', () => {
+                textScramble(num, num.dataset.value, 1.5); // Fast speed for 'quick and smooth' glitch
+            });
+        }
     });
 }
 
@@ -80,17 +120,17 @@ function switchTab(index) {
     const title = panels[index].querySelector('.panel-title');
     textScramble(title, title.innerText, 5); // Speed multiplier increased to 5 for titles
 
-    // Scramble effect for all rows in the panel
+    // Scramble effect for numbers in the panel (Sequential Reveal)
     const rows = panels[index].querySelectorAll('.panel-row');
     rows.forEach((row, i) => {
-        const label = row.querySelector('.row-label');
         const num = row.querySelector('.row-num');
 
-        // Slight delay for each row for a sequential reveal
-        setTimeout(() => {
-            if (label) textScramble(label, label.dataset.value || label.innerText);
-            if (num) textScramble(num, num.dataset.value || num.innerText);
-        }, i * 100);
+        if (num) {
+            if (!num.dataset.value) num.dataset.value = num.innerText;
+            setTimeout(() => {
+                textScramble(num, num.dataset.value, 2);
+            }, i * 100);
+        }
     });
 
     // Punchy entry for the active panel
@@ -99,6 +139,37 @@ function switchTab(index) {
         y: 30,
         duration: 0.8,
         ease: "power3.out"
+    });
+}
+
+function initExpertiseScramble() {
+    const items = document.querySelectorAll('.expertise-item');
+    items.forEach(item => {
+        const num = item.querySelector('.exp-num');
+        if (num) {
+            num.dataset.value = num.innerText;
+            item.addEventListener('mouseenter', () => {
+                textScramble(num, num.dataset.value, 1.5);
+            });
+        }
+    });
+}
+
+function initAdvisoryCardScramble() {
+    const cards = document.querySelectorAll('.adv-card');
+    cards.forEach(card => {
+        // Target ONLY metadata elements for the glitch effect
+        const metaElements = card.querySelectorAll('.card-code, .card-id');
+
+        metaElements.forEach(el => {
+            el.dataset.value = el.innerText;
+        });
+
+        card.addEventListener('mouseenter', () => {
+            metaElements.forEach(el => {
+                textScramble(el, el.dataset.value, 1.2);
+            });
+        });
     });
 }
 
@@ -266,18 +337,37 @@ function initMenu() {
     const closeBtn = document.querySelector('.close-menu');
     const overlay = document.querySelector('#menu-overlay');
     const menuContent = document.querySelector('.menu-content');
+    const navNums = document.querySelectorAll('.nav-num');
 
     burger.addEventListener('click', () => {
         overlay.style.display = 'block';
         gsap.to(overlay, { opacity: 1, duration: 0.5 });
         gsap.fromTo(menuContent,
-            { x: -400 },
+            { x: -450 }, // Fixed to match 450px width
             { x: 0, duration: 0.8, ease: "power4.out" }
         );
+
+        // Scramble animation for numbers (Password Animation)
+        navNums.forEach((num, index) => {
+            if (!num.dataset.value) num.dataset.value = num.innerText;
+
+            // Initial reveal scramble
+            setTimeout(() => {
+                textScramble(num, num.dataset.value, 2);
+            }, 300 + (index * 100));
+
+            // Hover glitch for main nav items
+            const parentItem = num.closest('.nav-item');
+            if (parentItem) {
+                parentItem.addEventListener('mouseenter', () => {
+                    textScramble(num, num.dataset.value, 1.5);
+                });
+            }
+        });
     });
 
     closeBtn.addEventListener('click', () => {
-        gsap.to(menuContent, { x: -400, duration: 0.6, ease: "power4.in" });
+        gsap.to(menuContent, { x: -450, duration: 0.6, ease: "power4.in" }); // Fixed to match 450px width
         gsap.to(overlay, {
             opacity: 0,
             duration: 0.5,
@@ -286,6 +376,77 @@ function initMenu() {
             }
         });
     });
+
+    // Dropdown Logic
+    const dropdown = document.querySelector('.nav-dropdown');
+    const plus = document.querySelector('.nav-plus');
+    const dropdownTiles = document.querySelectorAll('.dropdown-tile');
+    let isDropdownOpen = false;
+
+    // Ensure initial state
+    if (dropdown) gsap.set(dropdown, { height: 0 });
+
+    if (plus && dropdown) {
+        // Hover Glitch for sub-items
+        dropdownTiles.forEach(tile => {
+            const num = tile.querySelector('.sub-num');
+            if (num) {
+                num.dataset.value = num.innerText;
+                tile.addEventListener('mouseenter', () => {
+                    textScramble(num, num.dataset.value, 1.5); // Fast speed for 'quick and smooth' glitch
+                });
+            }
+        });
+
+        plus.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+
+            if (!isDropdownOpen) {
+                // Open: Spin 360 (Ends as a +)
+                gsap.to(dropdown, { height: 'auto', duration: 0.6, ease: "power2.out" });
+                gsap.to(plus, {
+                    rotation: 360,
+                    duration: 0.6,
+                    ease: "power2.out",
+                    color: "#e85642"
+                });
+                gsap.to(dropdownTiles, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 0.1,
+                    duration: 0.4,
+                    ease: "power2.out",
+                    onStart: () => {
+                        // Trigger initial scramble for sub-numbers on open
+                        const subNums = dropdown.querySelectorAll('.sub-num');
+                        subNums.forEach((num, i) => {
+                            setTimeout(() => {
+                                textScramble(num, num.innerText, 2);
+                            }, i * 50);
+                        });
+                    }
+                });
+                isDropdownOpen = true;
+            } else {
+                // Close
+                gsap.to(dropdown, { height: 0, duration: 0.4, ease: "power2.inOut" });
+                gsap.to(plus, {
+                    rotation: 0,
+                    duration: 0.6,
+                    ease: "power2.inOut",
+                    color: "#000"
+                });
+                gsap.to(dropdownTiles, {
+                    opacity: 0,
+                    y: -10,
+                    duration: 0.3,
+                    stagger: 0.05
+                });
+                isDropdownOpen = false;
+            }
+        });
+    }
 }
 
 function initClientSlider() {
