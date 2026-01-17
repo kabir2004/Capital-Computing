@@ -1300,190 +1300,184 @@ footer {
 
 @media (max-width: 768px) {
     .section {
-        padding: 80px 24px;
+        padding: 80px 20px;
+    }
+
+    /* Global fit fix */
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
     }
 
     /* Header & Hero */
-    .header-center-info {
-        display: none;
+    #main-header {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .header-left-tab {
+        padding: 15px 20px;
+        gap: 20px;
+        width: auto;
+        max-width: calc(100% - 60px);
+    }
+
+    .header-brand {
+        padding-right: 20px;
+        gap: 15px;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
     }
 
     .hero {
-        padding: 140px 24px 80px;
+        padding: 120px 20px 60px;
+        min-height: auto;
     }
 
     .hero-title {
-        font-size: 3.2rem;
+        font-size: 10vw;
         line-height: 1.1;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
+        word-break: break-word;
     }
 
     .hero-meta {
-        flex-direction: column;
-        gap: 24px;
-        align-items: flex-start;
+        margin-top: 40px;
+        gap: 20px;
     }
 
-    .meta-item .label {
-        margin-bottom: 4px;
-    }
-
-    /* Who We Are - Preserving Design Symmetry */
+    /* Who We Are */
     .who-we-are-inner {
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        gap: 50px;
+        gap: 40px;
+        padding: 0;
     }
 
     .huge-text {
-        font-size: 2.8rem;
-        line-height: 1.1;
-        letter-spacing: -1.5px;
+        font-size: 8vw;
+        line-height: 1.2;
+        word-break: break-word;
     }
 
     .magnetLines-container {
-        width: 80vmin;
-        height: 80vmin;
-        margin: 0 auto;
+        width: 300px;
+        height: 300px;
     }
 
-    /* Services - Surgical Stacking for Mobile */
+    /* Services Stacking */
     .service-item {
-        padding: 40px 24px;
-        min-height: 340px;
-        display: block;
+        padding: 30px 20px;
+        min-height: 320px;
     }
 
     .service-item h3 {
-        font-size: 1.8rem;
-        margin-top: 10px;
+        font-size: 1.6rem;
     }
 
-    .service-item p {
-        font-size: 0.95rem;
-        margin: 15px 0;
-        max-width: 100%;
+    .service-item:nth-child(n) {
+        top: 60px;
     }
 
-    /* Compact Stacking for shorter viewports */
-    .service-item:nth-child(1) {
-        top: 70px;
-    }
-
+    /* Reset all to a safe top */
     .service-item:nth-child(2) {
-        top: 120px;
+        top: 110px;
     }
 
     .service-item:nth-child(3) {
-        top: 170px;
+        top: 160px;
     }
 
     .service-item:nth-child(4) {
-        top: 220px;
+        top: 210px;
     }
 
     .service-item:nth-child(5) {
-        top: 220px;
+        top: 210px;
     }
 
     .item-visual {
-        position: absolute;
-        bottom: 30px;
-        right: 24px;
+        bottom: 20px;
+        right: 20px;
     }
 
     .service-graphic {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
-    /* Expertise Tabs - Surgical Mobile Layout */
+    /* Expertise Tabs */
     .tabs-content {
-        padding: 40px 20px;
+        padding: 30px 20px;
+        border: none;
+    }
+
+    .tab-triggers {
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+    }
+
+    .tab-trigger {
+        flex-shrink: 0;
+        padding: 10px 15px;
     }
 
     .panel-header {
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 30px;
-    }
-
-    .panel-pre {
-        font-size: 1rem;
+        margin-bottom: 25px;
     }
 
     .panel-title {
-        font-size: 3.2rem;
+        font-size: 10vw;
     }
-
-    .panel-body {
-        display: block;
-    }
-
-    .panel-side-num {
-        display: none;
-    }
-
-    /* Hide watermark on very small screens for clarity */
 
     .panel-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-        padding: 25px 0;
-    }
-
-    .row-num {
-        font-size: 0.7rem;
-        margin-bottom: 4px;
-    }
-
-    .row-label {
-        font-size: 1rem;
-        margin-bottom: 4px;
+        padding: 20px 0;
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: #333;
     }
 
     .row-desc {
         font-size: 0.9rem;
-        line-height: 1.5;
+        max-width: 100%;
     }
 
-    /* Testimonial - Surgical Center */
+    /* Testimonial */
     .testimonial {
-        padding: 100px 24px;
+        padding: 80px 20px;
     }
 
     .huge-quote {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.4;
-        text-align: center;
+        word-wrap: break-word;
     }
 
     .testimonial-container {
-        padding: 0 50px;
-    }
-
-    .testimonial-author {
-        margin-top: 30px;
+        padding: 0 40px;
+        width: 100%;
     }
 
     .nav-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 0.9rem;
+        width: 40px;
+        height: 40px;
     }
 
     .nav-btn.prev {
-        left: -15px;
+        left: 0;
     }
 
     .nav-btn.next {
-        right: -15px;
+        right: 0;
     }
 
     /* Footer */
     #main-footer {
-        padding: 80px 24px 30px;
+        padding: 60px 20px 40px;
     }
 
     .footer-top {
@@ -1491,43 +1485,39 @@ footer {
         gap: 40px;
     }
 
-    .footer-col:first-child {
-        display: none;
+    .footer-col {
+        width: 100%;
     }
 
     .footer-bottom-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-        padding-top: 40px;
+        text-align: left;
     }
 }
 
-/* Specific iPhone Fixes (Narrow Devices) */
 @media (max-width: 480px) {
+    .huge-text {
+        font-size: 2.2rem;
+    }
 
-    .huge-text,
     .hero-title {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
 
     .panel-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .section {
-        padding: 80px 20px;
+        padding: 60px 20px;
     }
 
-    .header-right {
-        gap: 10px;
+    .nav-btn {
+        width: 35px;
+        height: 35px;
     }
 
-    .btn-talk {
-        padding: 10px 15px;
-        font-size: 0.65rem;
-    }
-
-    .logo-container .logo-text {
-        font-size: 0.8rem;
+    .testimonial-container {
+        padding: 0 30px;
     }
 }
