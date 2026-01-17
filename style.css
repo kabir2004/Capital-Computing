@@ -1281,223 +1281,356 @@ footer {
     align-items: center;
 }
 
-/* Responsive Optimization */
-@media (max-width: 1024px) {
+/* ==========================================================================
+   ROBUST MOBILE RESPONSIVENESS (375px-430px)
+   ========================================================================== */
 
-    .huge-text,
-    .panel-title {
-        font-size: 3.5rem;
+@media (max-width: 850px) {
+    :root {
+        --header-height: 70px;
     }
 
-    .who-we-are-inner {
-        padding-left: 10%;
+    body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .footer-inner {
-        padding: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    /* Increased breathing room */
-    .section {
-        padding: 120px 24px;
-    }
-
-    /* Header optimization for more space */
     #main-header {
-        padding: 20px 24px;
+        height: auto;
+        padding: 10px 15px !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
     }
 
     .header-left-tab {
-        padding: 20px 24px;
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        width: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 
-    /* Hero - More expansive feel */
+    .header-brand {
+        gap: 10px !important;
+        padding-right: 15px !important;
+        border-right: 1px dotted rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .logo-text {
+        font-size: 0.85rem !important;
+    }
+
+    .logo-sub {
+        display: none !important;
+        /* Hide sub-text on mobile to save space */
+    }
+
+    .header-center-info {
+        display: none !important;
+        /* CRITICAL: Hide this to prevent layout stretching */
+    }
+
+    .header-right {
+        margin-top: 0 !important;
+    }
+
+    .btn-talk {
+        font-size: 0.7rem !important;
+        padding: 6px 12px !important;
+        border-width: 1px !important;
+    }
+
+    .burger-menu {
+        width: 25px !important;
+        height: 12px !important;
+    }
+
+    /* Section Padding Standard */
+    .section {
+        padding: 60px 20px !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    /* Hero */
     .hero {
-        padding: 180px 24px 120px;
+        padding: 120px 20px 40px !important;
+        height: auto !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hero-info-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .hero-stripes {
+        height: 30vh !important;
+        margin-top: 20px;
+    }
+
+    .info-col {
+        font-size: 0.65rem !important;
     }
 
     .hero-title {
-        font-size: 3.5rem;
-        line-height: 1.05;
-        letter-spacing: -2px;
+        font-size: 13vw !important;
+        line-height: 0.9;
+        letter-spacing: -0.04em !important;
+        padding-right: 0 !important;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
     }
 
-    .hero-meta {
-        margin-top: 60px;
-        gap: 35px;
+    .hero-footer {
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
-    .meta-item .label {
-        font-size: 0.7rem;
-        margin-bottom: 8px;
+    .hero-explore {
+        gap: 20px !important;
+        margin-top: 20px;
     }
 
-    /* Who We Are - Relaxed padding */
+    /* Who We Are */
+    .who-we-are {
+        overflow-x: hidden !important;
+    }
+
+    .section-label {
+        position: static !important;
+        margin-bottom: 30px !important;
+        display: block !important;
+    }
+
     .who-we-are-inner {
-        gap: 80px;
+        grid-template-columns: 1fr !important;
+        padding-left: 0 !important;
+        gap: 50px !important;
+        /* Increased gap for better visual separation */
+        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .huge-text {
-        font-size: 2.8rem;
-        line-height: 1.15;
-        letter-spacing: -1px;
+        font-size: 2.2rem !important;
+        /* Slightly larger for impact */
+        line-height: 1.15 !important;
+        letter-spacing: -0.5px !important;
+        text-align: left;
     }
 
     .magnetLines-container {
-        width: 85vmin;
-        height: 85vmin;
-        max-width: 350px;
-        max-height: 350px;
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto !important;
+        transform: scale(0.9);
+        /* Prevent tight fits */
     }
 
-    /* Services Stacking - Larger comfortable items */
+    /* Services */
+    .services-header {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 !important;
+        margin-bottom: 40px !important;
+    }
+
+    .services-header .section-label {
+        margin-bottom: 0 !important;
+    }
+
+    .service-count {
+        display: block !important;
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        font-family: inherit !important;
+    }
+
+    .section-title {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+        letter-spacing: -1px !important;
+    }
+
     .service-item {
-        padding: 60px 24px;
-        min-height: 420px;
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        gap: 20px !important;
+        padding: 40px 0 !important;
+        position: relative !important;
+        top: 0 !important;
+        border-top: 1px solid #333 !important;
     }
 
-    .service-item h3 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
+    .item-meta {
+        grid-column: 1 / -1 !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 10px !important;
     }
 
-    .service-item p {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        margin-bottom: 40px;
+    .item-content {
+        grid-column: 1 !important;
     }
 
-    /* Better tab visibility in stack */
-    .service-item:nth-child(1) {
-        top: 80px;
+    .item-content h3 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
+        padding-right: 15px !important;
     }
 
-    .service-item:nth-child(2) {
-        top: 150px;
-    }
-
-    .service-item:nth-child(3) {
-        top: 220px;
-    }
-
-    .service-item:nth-child(4) {
-        top: 290px;
-    }
-
-    .service-item:nth-child(5) {
-        top: 290px;
+    .item-content p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 30px !important;
     }
 
     .item-visual {
-        position: relative;
-        bottom: 0;
-        right: 0;
-        margin-top: 30px;
-        display: flex;
-        justify-content: flex-end;
+        grid-column: 2 !important;
+        align-self: start !important;
+        justify-content: flex-end !important;
+        padding-right: 0 !important;
+        margin-top: -5px !important;
+        /* Align with h3 top */
     }
 
     .service-graphic {
-        width: 100px;
-        height: 100px;
+        width: 50px !important;
+        height: 50px !important;
     }
 
-    /* Expertise Tabs - Spaced properly */
-    .tabs-content {
-        padding: 60px 24px;
-        border: 1px solid #222;
+    .service-svg {
+        width: 100% !important;
+        height: 100% !important;
     }
 
-    .tab-triggers {
-        gap: 15px;
-        padding-bottom: 20px;
-        margin-bottom: 40px;
-        border-bottom: 1px solid #222;
+    /* Clients Slider */
+    .clients-header {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
     }
 
-    .panel-header {
-        margin-bottom: 40px;
+    .card-main {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .client-img-fallback {
+        height: 250px !important;
+        font-size: 1.8rem !important;
+    }
+
+    .card-desc p {
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .btn-card {
+        padding: 12px 24px !important;
+        text-align: center;
+        width: 100% !important;
+    }
+
+    /* Expertise Tabs */
+    .tab-trigger {
+        font-size: 0.6rem !important;
+        padding: 8px 12px !important;
+    }
+
+    .tab-panel {
+        padding: 30px 15px !important;
     }
 
     .panel-title {
-        font-size: 3.5rem;
+        font-size: 2.2rem !important;
+    }
+
+    .panel-body {
+        grid-template-columns: 1fr !important;
     }
 
     .panel-row {
-        padding: 40px 0;
+        grid-template-columns: 1fr !important;
+        padding: 20px 0 !important;
     }
 
-    .row-label {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
-
-    .row-desc {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #ccc;
-    }
-
-    /* Testimonial - Cinematic Air */
-    .testimonial {
-        padding: 140px 24px;
-    }
-
+    /* Testimonial */
     .huge-quote {
-        font-size: 2rem;
-        line-height: 1.4;
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
     }
 
-    .testimonial-container {
-        padding: 0 20px;
-    }
-
-    .testimonial-author {
-        margin-top: 50px;
-    }
-
-    .nav-btn {
-        width: 50px;
-        height: 50px;
-        position: static;
-        transform: none;
-        margin: 0;
+    .testimonial-slides {
+        min-height: 380px !important;
     }
 
     .testimonial-nav {
+        margin-top: 30px !important;
+        position: relative !important;
         display: flex;
         justify-content: center;
-        gap: 30px;
-        margin-top: 60px;
+        gap: 15px;
     }
 
-    /* Footer - Organized Breathing */
+    .nav-btn {
+        position: static !important;
+        transform: none !important;
+    }
+
+    /* Footer */
     #main-footer {
-        padding: 100px 24px 60px;
+        height: auto;
+        padding: 40px 20px !important;
+    }
+
+    .footer-inner {
+        padding: 0 !important;
     }
 
     .footer-top {
-        gap: 80px;
+        grid-template-columns: 1fr !important;
+    }
+
+    .bold-links li {
+        font-size: 1.4rem !important;
+    }
+
+    .footer-bottom-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Menu Base */
+    .menu-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .nav-item a {
+        font-size: 1.8rem !important;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-
-    .huge-text {
-        font-size: 2.4rem;
-    }
-
-    .panel-title {
-        font-size: 2.8rem;
-    }
-
-    .section {
-        padding: 100px 20px;
+/* Specific Safe Area Insets */
+@supports (padding: env(safe-area-inset-top)) {
+    #main-header {
+        padding-top: calc(10px + env(safe-area-inset-top)) !important;
     }
 }
